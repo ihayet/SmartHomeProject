@@ -1,0 +1,67 @@
+--------------------------------------------------------------------------------------------------------------------------
+House:
+--------------------------------------------------------------------------------------------------------------------------
+
+id BIGINT
+
+owner_name TINYTEXT
+contact_number INT
+date_of_birth DATE
+blood_group TINYTEXT
+profession TINYTEXT
+
+house_name TINYTEXT
+address TINYTEXT
+area TINYTEXT
+city TINYTEXT
+size SMALLINT
+number_of_rooms TINYINT
+layout IMAGE
+
+lock_phrase TINYTEXT //encrypted
+key_phrase TINYTEXT //encrypted
+
+service_discovery TINYTEXT //publicity type
+date_of_registration DATE
+
+primary key: id
+
+--------------------------------------------------------------------------------------------------------------------------
+Rooms:
+--------------------------------------------------------------------------------------------------------------------------
+
+id TINYINT
+house_id BIGINT
+name TINYTEXT
+number_of_appliances TINYTEXT
+layout IMAGE
+
+primary key: (id,house_id)
+foreign key: house_id references House(id)
+
+--------------------------------------------------------------------------------------------------------------------------
+Appliance:
+--------------------------------------------------------------------------------------------------------------------------
+
+id TINYINT
+name TINYTEXT
+room_id TINYINT
+house_id BIGINT
+
+power_control TINYINT (is the appliance capable of being run in varied power supply?)
+status TINYINT(3,0) unsigned (brightness) (0 => off 255 => on)
+change_executed TINYINT (has the request been executed)
+
+primary key: (id,room_id,house_id)
+foreign key: room_id references Rooms(id), house_id references House(id)
+
+--------------------------------------------------------------------------------------------------------------------------
+Lights:
+--------------------------------------------------------------------------------------------------------------------------
+inherits from appliance
+
+--------------------------------------------------------------------------------------------------------------------------
+Fans:
+--------------------------------------------------------------------------------------------------------------------------
+inherits from appliance
+

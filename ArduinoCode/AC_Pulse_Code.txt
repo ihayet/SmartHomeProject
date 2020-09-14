@@ -1,0 +1,19 @@
+//  int val1 = analogRead(A0);
+  //  //double newVal1 = map(val1, 0, 1023, 0, 4);
+  //
+  //  int val2 = analogRead(A1);
+  //  //double newVal2 = map(val2, 0, 1023, 0, 4);
+  //
+  //  fan1->setOutputParameters(true, val1);
+  //  fan2->setOutputParameters(true, val2);
+  //
+  //  if(zeroDetected == true)
+  //  {
+  //    fan1->setZeroDetectionTime(micros());
+  //    fan2->setZeroDetectionTime(micros());
+  //
+  //    zeroDetected = false;
+  //  }
+  //
+  //  fan1->output(micros());
+  //  fan2->output(micros());

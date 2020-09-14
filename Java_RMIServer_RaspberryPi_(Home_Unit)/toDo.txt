@@ -1,0 +1,3 @@
+1. One object per client in the server
+2. Unbind object from registry if no connection is detected - resolving the zombie thread in the server-side from client-side improper shutdown
+3. Client side - Syncing Exception - Reconnection isn't working

@@ -1,0 +1,11 @@
+1. 	Polling - Server/Client - 
+	Maximum Heap size occupied - 64MB
+	Number of clients - 3
+	One registry
+	One remote object
+	
+	Polling - Server/Client -
+	Maximum Heap size occupied - 40MB
+	Number of clients - 0
+	One registry
+	One remote object
